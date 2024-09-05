@@ -276,8 +276,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .qr-img {
-  margin-left: 30%; 
-  width: 60%; 
+  padding-top: 300px; 
+  width: 50%; 
   max-width: 200px;
 }
 
