@@ -4,11 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/style.css"> <!-- Asegúrate de que styles.css esté en el mismo nivel que images -->
+    <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
     <title>Inicio</title>
+    <style>
+        .productos-section {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .productos-section img {
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+
+        .productos-description {
+            font-family: 'Montserrat', sans-serif;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 40px;
+            width: 80%; /* Reducir el largo del texto a un 80% */
+            margin-left: auto;
+            margin-right: auto; /* Centrar el texto */
+            padding: 0 20px;
+        }
+
+        /* Contenedor para centrar y juntar las imágenes */
+        .productos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; /* Espacio entre las imágenes, ajusta este valor según lo necesites */
+        }
+
+        /* Estilos para la imagen de perros */
+        .perros-column img,
+        .gatos-column img {
+            max-width: 400px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .perros-column img:hover,
+        .gatos-column img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+        }
+
+        /* Margen inferior para separar las imágenes de productos de las imágenes de "pago contra entrega" */
+        .productos-column {
+            margin-bottom: 50px; /* Ajusta este valor según necesites */
+        }
+
+        .footer-img {
+            width: 100%;
+            max-width: 500px;
+            font-size: 1.5rem;
+        }
+
+        .footer-text {
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -31,58 +92,38 @@
             </ul>
         </div>
     </nav>
-    
 
-    <!-- Modal para el menú en dispositivos pequeños -->
-    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="menuModalLabel">Menú</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">NOSOTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">PRODUCTOSES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Contacto">CONTACTO</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Título Productos -->
+    <section class="productos-section">
+        <img src="images/inicio/titulo_productos.png" alt="Título Productos">
+        <p class="productos-description">
+            Descubre nuestra amplia gama de accesorios diseñados para el bienestar y estilo de tus mascotas. Cada producto está creado con materiales de alta calidad y un diseño pensado para la comodidad y diversión de perros y gatos. Encuentra lo mejor para tus compañeros peludos con nuestra colección cuidadosamente seleccionada.
+        </p>
+    </section>
+
+    <!-- Imágenes de Productos -->
+    <div class="container-fluid">
+        <div class="productos-container">
+            <div class="productos-column perros-column">
+                <img src="images/inicio/perros_productos.png" alt="Perros Productos">
+            </div>
+            <div class="productos-column gatos-column">
+                <img src="images/inicio/gatos_productos.png" alt="Gatos Productos">
             </div>
         </div>
-    </div>
-    <div class="container text-center">
-        <div class="col-12 p-3 text-column">
-            <h1 class="title-inicio" style="font-family: 'Montserrat', sans-serif;padding:1px; font-weight: 1000; color: #848688; font-size: 2rem;">¿QUÉ ESTÁS BUSCANDO?</h1>
-        </div>
-    </div>
 
-    <!-- Contenido principal -->
-    <div class="container-fluid nosotros-section" style="background-color: #000000;">
-        <div class="row no-gutters">
-            <div class="col-md-6 col-inicio">
-                <a href="perros.html" class="property-link">
-                    <img src="images/inicio/oliveros_hombre.png" alt="hombre" style="width: 100%; height: auto;">
-                </a>
+        <div class="row text-center mt-4">
+            <div class="col-md-6">
+                <img src="images/inicio/envios.png" alt="Envíos" class="footer-img">
             </div>
-            <div class="col-md-6 col-inicio">
-                <a href="gatos.html" class="property-link">
-                    <img src="images/inicio/oliveros_mujer.png" alt="mujer" style="width: 100%; height: auto;">
-                </a>
+            <div class="col-md-6">
+                <img src="images/inicio/pago_contraentrega.png" alt="Pago Contra Entrega" class="footer-img">
             </div>
         </div>
     </div>
 
-      <!-- Footer -->
-      <section id="Contacto" class="contacto-section">
+    <!-- Footer -->
+    <section id="Contacto" class="contacto-section">
         <div class="container-fluid" style="padding: 20px;">
             <div class="row">
                 <div class="col-lg-6 col-md-12 text-center">
@@ -92,7 +133,6 @@
                     <img src="images/contacto/qroli.png" class="qr-img">
                 </div>
                 <div class="col-lg-6 col-md-12 text-center">
-                    
                     <div style="display: flex; justify-content: center;">
                         <a href="https://wa.link/mo7w4e" class="whatsapp-link">WhatsApp</a>
                     </div>
