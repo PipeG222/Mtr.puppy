@@ -41,6 +41,7 @@
   height: 100%; /* Ocupa todo el alto del enlace */
   object-fit: contain; /* Mantiene la imagen entera visible, ajustando su tamaño proporcionalmente */
   object-position: center; /* Centra la imagen dentro de su contenedor */
+  border-radius: 15px;
 }
 .contacto-section {
   position: relative;
@@ -56,7 +57,82 @@
   padding: 50px 0; /* Ajusta el padding según sea necesario */
   box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
 }
+.productos-section {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+}
 
+.productos-section img {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.productos-description {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 40px;
+  width: 80%; /* Reducir el largo del texto a un 80% */
+  margin-left: auto;
+  margin-right: auto; /* Centrar el texto */
+  padding: 0 20px;
+}
+
+/* Contenedor para centrar y juntar las imágenes */
+.productos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espacio entre las imágenes */
+  flex-wrap: wrap;
+}
+
+/* Estilos para las imágenes de perros y gatos */
+.perros-column img,
+.gatos-column img {
+  max-width: 400px; /* Mantén el tamaño original de las imágenes */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.perros-column img:hover,
+.gatos-column img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Margen inferior para separar las imágenes de productos de las imágenes de "pago contra entrega" */
+.productos-column {
+  margin-bottom: 50px;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 500px;
+  font-size: 1.5rem;
+}
+
+.footer-text {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .productos-container {
+      flex-direction: column; /* Poner las imágenes una encima de la otra en pantallas pequeñas */
+  }
+
+  .perros-column img,
+  .gatos-column img {
+      max-width: 400px; /* Mantén el tamaño original en dispositivos pequeños */
+  }
+
+  .productos-column {
+      margin-bottom: 20px; /* Ajustar el margen entre las imágenes en pantallas pequeñas */
+  }
+}
 
 
 .contacto-section h3,
@@ -200,16 +276,53 @@
 }
 .border-box {
   padding: 10px;
-  border: 2px solid #696969; /* Cambia el color del borde según tus preferencias */
   border-radius: 0px; /* Bordes redondeados */
 }
-
-.property-item {
-  box-shadow: none;
-  padding: 20px;
-  overflow: hidden; /* Asegura que el contenido no se desborde */
+.texto-property-item {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; /* Elimina el margen */
+  min-height: 350px; /* Altura mínima vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333; /* Ajusta el color del texto */
 }
 
+.btn-ver-producto {
+  background-color: #90EE90; /* Verde claro */
+  color: black;
+  border-radius: 10px;
+  width: 95%;
+  padding: 10px;
+}
+
+.btn-lo-quiero {
+  background-color: #FF6347; /* Rojo */
+  color: white;
+  border-radius: 10px;
+  width: 95%;
+  padding: 10px;
+}
+.property-item {
+  border-radius: 15px; /* Bordes redondeados para la tarjeta */
+  overflow: hidden; /* Asegura que el contenido no desborde los bordes redondeados */
+  transition: transform 0.3s ease-in-out;
+  padding: 20px;
+  background-color: #fff; /* Fondo blanco para la tarjeta */
+  text-align: center; /* Centramos el contenido */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.property-item:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+.img-wrapper img {
+  border-radius: 15px; /* Bordes redondeados para la imagen */
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajuste de imagen dentro del contenedor */
+  box-shadow: none; /* Eliminar el sombreado oscuro alrededor de la imagen */
+}
 .custom-carousel {
   height: 70vh; /* Ocupa el 70% de la altura de la pantalla */
   overflow: hidden;

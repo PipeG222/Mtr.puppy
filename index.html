@@ -9,84 +9,7 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
     <title>Inicio</title>
-    <style>
-        .productos-section {
-            background-color: #f0f0f0;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .productos-section img {
-            width: 100%;
-            max-width: 350px;
-            margin-bottom: 20px;
-        }
-
-        .productos-description {
-            font-family: 'Montserrat', sans-serif;
-            text-align: justify;
-            color: #000;
-            margin-bottom: 40px;
-            width: 80%; /* Reducir el largo del texto a un 80% */
-            margin-left: auto;
-            margin-right: auto; /* Centrar el texto */
-            padding: 0 20px;
-        }
-
-        /* Contenedor para centrar y juntar las imágenes */
-        .productos-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px; /* Espacio entre las imágenes */
-            flex-wrap: wrap;
-        }
-
-        /* Estilos para las imágenes de perros y gatos */
-        .perros-column img,
-        .gatos-column img {
-            max-width: 400px; /* Mantén el tamaño original de las imágenes */
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .perros-column img:hover,
-        .gatos-column img:hover {
-            transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
-        }
-
-        /* Margen inferior para separar las imágenes de productos de las imágenes de "pago contra entrega" */
-        .productos-column {
-            margin-bottom: 50px;
-        }
-
-        .footer-img {
-            width: 100%;
-            max-width: 500px;
-            font-size: 1.5rem;
-        }
-
-        .footer-text {
-            font-size: 1.5rem;
-            color: #FFD700;
-        }
-
-        /* Media query para pantallas pequeñas */
-        @media (max-width: 768px) {
-            .productos-container {
-                flex-direction: column; /* Poner las imágenes una encima de la otra en pantallas pequeñas */
-            }
-
-            .perros-column img,
-            .gatos-column img {
-                max-width: 400px; /* Mantén el tamaño original en dispositivos pequeños */
-            }
-
-            .productos-column {
-                margin-bottom: 20px; /* Ajustar el margen entre las imágenes en pantallas pequeñas */
-            }
-        }
-    </style>
+    
 </head>
 <body>
     <!-- Navbar -->
@@ -117,27 +40,30 @@
             Descubre nuestra amplia gama de accesorios diseñados para el bienestar y estilo de tus mascotas. Cada producto está creado con materiales de alta calidad y un diseño pensado para la comodidad y diversión de perros y gatos. Encuentra lo mejor para tus compañeros peludos con nuestra colección cuidadosamente seleccionada.
         </p>
     </section>
-
-    <!-- Imágenes de Productos -->
-    <div class="container-fluid">
-        <div class="productos-container">
-            <div class="productos-column perros-column">
+<!-- Imágenes de Productos -->
+<div class="container-fluid">
+    <div class="productos-container">
+        <div class="productos-column perros-column">
+            <a href="perros.html">
                 <img src="images/inicio/perros_productos.png" alt="Perros Productos">
-            </div>
-            <div class="productos-column gatos-column">
-                <img src="images/inicio/gatos_productos.png" alt="Gatos Productos">
-            </div>
+            </a>
         </div>
-
-        <div class="row text-center mt-4">
-            <div class="col-md-6">
-                <img src="images/inicio/envios.png" alt="Envíos" class="footer-img">
-            </div>
-            <div class="col-md-6">
-                <img src="images/inicio/pago_contraentrega.png" alt="Pago Contra Entrega" class="footer-img">
-            </div>
+        <div class="productos-column gatos-column">
+            <a href="gatos.html">
+                <img src="images/inicio/gatos_productos.png" alt="Gatos Productos">
+            </a>
         </div>
     </div>
+
+    <div class="row text-center mt-4">
+        <div class="col-md-6">
+            <img src="images/inicio/envios.png" alt="Envíos" class="footer-img">
+        </div>
+        <div class="col-md-6">
+            <img src="images/inicio/pago_contraentrega.png" alt="Pago Contra Entrega" class="footer-img">
+        </div>
+    </div>
+</div>
 
     <!-- Footer -->
     <section id="Contacto" class="contacto-section">
