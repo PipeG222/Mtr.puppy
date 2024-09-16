@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+@font-face {
+  font-family: 'Arnorg';
+  src: url('./fonts/ARNORG_.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Puedes aplicarla específicamente al navbar */
+.navbar-nav {
+  font-family: 'Arnorg', sans-serif;
+  color: rgb(102, 51, 51);
+
+}
 .nav-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arnorg', sans-serif;
     font-size: 1.2em; /* Ajusta este valor para cambiar el tamaño de la fuente */
     font-weight: bold; /* Esto hará que el texto sea más grueso */
+    color: rgb(102, 51, 51);
 }
 
 .titulo-responsive{
@@ -50,12 +64,33 @@
   background-size: 100% auto; /* Ajusta el ancho al 100% y la altura automáticamente */
   background-position: center center; /* Centra la imagen en ambas direcciones */
   color: white;
-  min-height: 600px;
+  min-height: 500px;
   background-color:white;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   padding: 50px 0; /* Ajusta el padding según sea necesario */
   box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+}
+
+@media (max-width: 768px) {
+  .contacto-section {
+    background-image: url('../images/contacto/contacto_celular.png');
+    background-size: 100% auto; /* Ajusta el ancho al 100% y la altura automáticamente */
+    padding: 80px 0; /* Ajusta el padding según sea necesario */
+    height: 730px;
+
+  }
+
+  .qr-img {
+    display: none; /* Oculta la imagen del QR en pantallas pequeñas */
+  }
+
+  .social-icons {
+    position: absolute;
+    bottom: -600px;  /* Coloca el icono de Instagram 20px desde el fondo */
+    right: 20px;   /* Coloca el icono de Instagram 20px desde la derecha */
+    margin: 0;
+  }
 }
 .productos-section {
   background-color: #f0f0f0;
